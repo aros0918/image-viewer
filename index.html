@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Viewer</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+    <div class="area" >
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div >
+    <div class="context">
+      <button class="glow-on-hover" id="select-folder">Select Folder</button>
+      <input type="file" id="csvFile" accept=".csv" style="font-size: 18px; width: 270px; color: #fff; background-color: black;"/>
+      <!-- <button class="glow-on-hover" id="csvbutton">csv button</button> -->
+      <input style="width: 500px;" id="gooleurl" style="font-size: 15px;"></input>
+      <div id="image-container"></div>
+      <!-- <div style="position: relative;"> -->
+        <button class="glow-on-hover" id="previous">Previous</button>
+        <button class="glow-on-hover" id="next">Next</button>
+      <!-- </div> -->
+      <input type="checkbox" id="outputCheckbox" style="border-color: aquamarine; width: 50px; height: 50px;"></input>
+      <button class="glow-on-hover" id="finishbutton">Finish</button>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
