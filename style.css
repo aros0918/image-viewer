@@ -207,14 +207,14 @@ body {
     100% { background-position: 0 0; }
 }
 img {
-    width: 75vw;
+    width: 65vw;
 }
 #image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 85vh;
     text-align: center;
 }
 #image {

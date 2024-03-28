@@ -131,15 +131,20 @@ finishbutton.addEventListener('click', () => {
   //   }
   // }
   // checkbox.checked = imageUrls[currentIndex].approve;
-
+  let filenames;
+  let addresses;
   csv = headercsv.substring(9);
   for(let j = 0; j < imageUrls.length; j++){
     if(imageUrls[j].approve === true){
       for(let i = 0; i < data.length; i++){
         if(data[i].filename === imageUrls[j].name){
-          csv += ('"' + data[i].filename + '"');
+          filenames = ('"' + data[i].filename + '"');
+          filenames = filenames.replace(/#/g, "");
+          csv += filenames
           csv += ',';
-          csv += ('"' + data[i].address + '"');
+          addresses = ('"' + data[i].address + '"');
+          addresses = addresses.replace(/#/g, "");
+          csv += addresses
           csv += ',';
 
           csv += data[i].city;
@@ -181,7 +186,8 @@ function showPreviousImage() {
   displayImage();
   for(let i = 0; i < data.length; i++){
     if(data[i].filename === imageUrls[currentIndex].name){
-      googleurl.value = data[i].link;
+      // googleurl.textContent  = data[i].link;
+      googleurl.href = data[i].link;
     }
   }
   checkbox.checked = imageUrls[currentIndex].approve;
@@ -197,7 +203,8 @@ function showNextImage() {
 
   for(let i = 0; i < data.length; i++){
     if(data[i].filename === imageUrls[currentIndex].name){
-      googleurl.value = data[i].link;
+      // googleurl.textContent  = data[i].link;
+      googleurl.href = data[i].link;
     }
   }
   
